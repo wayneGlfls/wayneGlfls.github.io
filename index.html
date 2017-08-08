@@ -1,7 +1,29 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+<script src="https://wayne123-developer-edition.ap5.force.com/lightning/lightning.out.js"> </script>
+<script>
+    $Lightning.use("c:LightningOutTest",    
+        function() {                  
+            $Lightning.createComponent(
+                "c:PkemonImageV2", 
+                { },                  
+                "lightningLocator",
+                function(cmp) {
+              
+                }
+            );
+        },
+        'https://wayne123-developer-edition.ap5.force.com/' 
+    );
+</script>
+</head>
+
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
 </body>
+
+
+
 </html>
