@@ -24,10 +24,10 @@
     
    
   <script>   
-     $Lightning.use("c:LightningOutTest",    
+     $Lightning.use("c:PokemonApp",    
         function() {                  
             $Lightning.createComponent(
-                "c:PkemonImageV2", 
+                "c:LightningMenu", 
                 { },                  
                 "lightningLocator",
                 function(cmp) {
@@ -38,23 +38,9 @@
         'https://wayne123-developer-edition.ap5.force.com/' 
     );
       
-      $Lightning.use("c:LightningOutTest",    
-        function() {                  
-            $Lightning.createComponent(
-                "c:PokemonHeader", 
-                { },                  
-                "lightningHeader",
-                function(cmp) {
-              
-                }
-            );
-        },
-        'https://wayne123-developer-edition.ap5.force.com/' 
-    );
  </script>  
  <style>
      div .lightningLocator {
-    margin-top: 200px;
    }
      
  </style>
