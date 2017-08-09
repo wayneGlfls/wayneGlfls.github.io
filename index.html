@@ -18,12 +18,28 @@
         },
         'https://wayne123-developer-edition.ap5.force.com/' 
     );
+    
+   $Lightning.use("c:LightningOutTest",    
+        function() {                  
+            $Lightning.createComponent(
+                "c:PokemonHeader", 
+                { },                  
+                "lightningHeader",
+                function(cmp) {
+              
+                }
+            );
+        },
+        'https://wayne123-developer-edition.ap5.force.com/' 
+    );
 </script>
+    
+    
 </head>
 
 
 <body>
-
+ <div style="width:100%;height:100px;" id="lightningHeader"> 
  <div style="width:100%;height:100px;" id="lightningLocator"> 
 </body>
 
