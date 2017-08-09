@@ -24,12 +24,26 @@
     
    
   <script>   
-         $Lightning.use("c:LightningOutTest",    
+     $Lightning.use("c:LightningOutTest",    
         function() {                  
             $Lightning.createComponent(
                 "c:PkemonImageV2", 
                 { },                  
                 "lightningLocator",
+                function(cmp) {
+              
+                }
+            );
+        },
+        'https://wayne123-developer-edition.ap5.force.com/' 
+    );
+      
+      $Lightning.use("c:LightningOutTest",    
+        function() {                  
+            $Lightning.createComponent(
+                "c:PokemonHeader", 
+                { },                  
+                "lightningHeader",
                 function(cmp) {
               
                 }
