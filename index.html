@@ -14,8 +14,24 @@
 <body>
    <div class="slds" id="lightningLocator"> </div>
     
-   
-  <script>   
+    
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jsforce/1.7.0/jsforce.min.js"></script>
+    
+  <script>
+    jsforce.browser.init({
+      clientId: '3MVG9d8..z.hDcPJYlRQA5fW4PxovJyC4Q2deSdnJERoAe85JzSeWN.xvLsTX4dKzgdNShXEdp_YsgbcoruvJ',
+      redirectUri: 'https://wayneglfls.github.io/'
+    });
+    jsforce.browser.on('connect', function(conn) {
+      conn.query('SELECT Id, Name FROM Account', function(err, res) {
+        if (err) { return console.error(err); }
+        console.log(res);
+      });
+    });
+  </script>
+    
+  <script>  
+    /*
      $Lightning.use("c:PokemonApp",    
         function() {                  
             $Lightning.createComponent(
@@ -28,9 +44,10 @@
             );
         },
         'https://wayne123-developer-edition.ap5.force.com/' 
-    );
+    );*/
       
  </script>  
+    
  <style>
      div .lightningLocator {
    }
