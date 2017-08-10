@@ -9,15 +9,10 @@
       redirectUri: 'https://wayneglfls.github.io/'
     })
     
-   jsforce.browser.on('connect', function(conn) {
-      conn.authorize(code, function(err, userInfo) {
-      console.log(conn.accessToken);
-      console.log(conn.refreshToken);
-      console.log(conn.instanceUrl);
-      console.log("User ID: " + userInfo.id);
-      console.log("Org ID: " + userInfo.organizationId);
-    // ...
-      res.send('success'); // or your desired response
+jsforce.browser.on('connect', function(conn) {
+  conn.query('SELECT Id, Name FROM Account', function(err, res) {
+    if (err) { return console.error(err); }
+    console.log(res);
   });
 });
     
