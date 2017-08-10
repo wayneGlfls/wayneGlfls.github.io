@@ -17,34 +17,10 @@
     
   <script src="//cdnjs.cloudflare.com/ajax/libs/jsforce/1.7.0/jsforce.min.js"></script>
     
-  <script>
-    jsforce.browser.init({
-      clientId: '3MVG9d8..z.hDcPJYlRQA5fW4PxovJyC4Q2deSdnJERoAe85JzSeWN.xvLsTX4dKzgdNShXEdp_YsgbcoruvJ',
-      redirectUri: 'https://wayneglfls.github.io/'
-    });
-      
-      
-    var jsforce = require('jsforce');
-    var conn = new jsforce.Connection({
-      // you can change loginUrl to connect to sandbox or prerelease env.
-       loginUrl : 'https://www.salesforce.com'
-    });
-    conn.login(username, password, function(err, userInfo) {
-      if (err) { return console.error(err); }
-      // Now you can get the access token and instance URL information.
-      // Save them to establish connection next time.
-      console.log(conn.accessToken);
-      console.log(conn.instanceUrl);
-      // logged in user property
-      console.log("User ID: " + userInfo.id);
-      console.log("Org ID: " + userInfo.organizationId);
-      // ...
-    });
-      
-  </script>
+
     
   <script>  
-    /*
+    
      $Lightning.use("c:PokemonApp",    
         function() {                  
             $Lightning.createComponent(
@@ -57,7 +33,7 @@
             );
         },
         'https://wayne123-developer-edition.ap5.force.com/' 
-    );*/
+    );
       
  </script>  
     
