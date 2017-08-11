@@ -10,9 +10,10 @@
       clientId: '3MVG9d8..z.hDcPJYlRQA5fW4PxovJyC4Q2deSdnJERoAe85JzSeWN.xvLsTX4dKzgdNShXEdp_YsgbcoruvJ',
       clientSecret : '1928434588711300427',
       redirectUri: 'https://wayneglfls.github.io/'      
-    })
+    });
  
     //1928434588711300427 client secret
+    var username ='niwei4365@gmail.com';
 
     jsforce.browser.on('connect', function(conn) {
       conn.login(username, password, function(err, userInfo) {
