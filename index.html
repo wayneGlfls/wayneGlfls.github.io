@@ -15,23 +15,29 @@
  
     //1928434588711300427 client secret
 
- function connecthere(){  
-    var conn = new jsforce.Connection({
-      // you can change loginUrl to connect to sandbox or prerelease env.
-       loginUrl : 'https://www.salesforce.com'
-    });
-    conn.login(username, password, function(err, userInfo) {
-      if (err) { return console.error(err); }
-      // Now you can get the access token and instance URL information.
-      // Save them to establish connection next time.
-      console.log(conn.accessToken);
-      console.log(conn.instanceUrl);
-      // logged in user property
-      console.log("User ID: " + userInfo.id);
-      console.log("Org ID: " + userInfo.organizationId);
-      // ...
-    });
-  }
+    function connectMe(){
+
+        //var jsforce = require('jsforce');
+        var username = 'niwei4365@gmail.com';//Actual USER
+        var password = 'ZYJNBQnw4321!';// Actual Password-SecurityToken
+
+        var conn = new jsforce.Connection({
+            // you can change loginUrl to connect to sandbox or prerelease env.
+            loginUrl : 'https://login.salesforce.com'
+        });
+
+        console.log(jsforce);
+        console.log(conn);
+        console.log('logging in');
+
+        conn.login(username, password, function(err, userInfo) {
+            if (err) { return console.error(err); }
+            console.log(conn.accessToken);
+            console.log(conn.instanceUrl);
+            console.log("User ID: " + userInfo.id);
+            console.log("Org ID: " + userInfo.organizationId);
+        });
+    }
     /*
     jsforce.browser.on('connect', function(conn) {
       conn.query('SELECT Id, Name FROM Account', function(err, res) {
@@ -44,6 +50,6 @@
  </script>
 </head>
 <body>
-  <button onclick="connecthere();">Login</button>
+  <button onclick="connectMe();">Login</button>
 </body>
 </html>
