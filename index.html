@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  what?4
+  what?5
   <script src="//cdnjs.cloudflare.com/ajax/libs/jsforce/1.7.0/jsforce.min.js"></script>
   
   <script>
@@ -45,7 +45,7 @@
     
     jsforce.browser.on('connect', function(conn) {
       conn.query('SELECT Id, Name FROM Account', function(err, res) {
-        if (err) { return console.error(err); }
+        if (err) { console.log(err); }
         console.log(res);
       });
     });
