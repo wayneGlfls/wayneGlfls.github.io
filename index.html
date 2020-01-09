@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  what?2
+  what?3
   <script src="//cdnjs.cloudflare.com/ajax/libs/jsforce/1.7.0/jsforce.min.js"></script>
   
   <script>
@@ -11,10 +11,10 @@
       clientSecret : '1A5C4920A4413FDD2CB47700EA9FDE9A6EF46744D26DC9665FBA4A25938C1297',
       redirectUri: 'https://wayneglfls.github.io/'      
     });
-   
+    console.log('oauth2 is '+oauth2);
  
-    //1928434588711300427 client secret
-
+ 
+    /*
     jsforce.browser.on('connect', function(app) {
       app.get('/oauth2/auth', function(req, res) {
          res.redirect(oauth2.getAuthorizationUrl({ scope : 'api id web' }));
@@ -40,14 +40,14 @@
           });
         });      
     });
+    */
     
-    /*
     jsforce.browser.on('connect', function(conn) {
       conn.query('SELECT Id, Name FROM Account', function(err, res) {
         if (err) { return console.error(err); }
         console.log(res);
       });
-    });*/
+    });
     
         
  </script>
